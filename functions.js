@@ -167,12 +167,12 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return arr.map(animal => {
+    return arr.map(animal => 
         [
             ['name', animal.name],
             ['type', animal.type]
-        ];
-    });
+        ]
+    );
 }
 
 ////////////////////////////////////////////////////////
@@ -201,7 +201,9 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    return arr.filter(cars => 
+        cars.type === 'car');
+    
 }
 
 /*
@@ -214,7 +216,9 @@ Output:
 */
 
 export function getChevyCars(arr) {
-    return [];
+    return arr
+        .filter(cars => cars.make === 'chevy')
+        .filter(cars => cars.type === 'car');
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

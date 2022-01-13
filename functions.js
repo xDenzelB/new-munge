@@ -97,7 +97,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    return arr.map(hungry => ({ ...hungry, isHungry: true }));
 }
 
 /*
@@ -111,10 +111,13 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map(shout => {
+        return {
+            name: shout.name.toUpperCase(),
+            type: shout.type
+        };
+    });
 }
-
-
 /*
 
 Output:
@@ -122,7 +125,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map(string => string.name + string.type);
 }
 
 /*
